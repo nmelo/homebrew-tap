@@ -7,22 +7,22 @@ class Gp < Formula
   on_macos do
     on_arm do
       url "https://github.com/nmelo/gaspeek/releases/download/v0.1.0/gaspeek_darwin_arm64.tar.gz"
-      sha256 "3da8f87981b350b51616db891c3f3142f4f5b6c4c23bd345f8debf3bb4d65ab4"
+      sha256 "e3eeb6b4760e3fbac21e54015e27e4c58fb51b12bd6734ff4ed317359cd5f4f6"
     end
     on_intel do
       url "https://github.com/nmelo/gaspeek/releases/download/v0.1.0/gaspeek_darwin_amd64.tar.gz"
-      sha256 "09faf73cde4af107fcf0bfe9a7ce2a8d898cbd6a617af5b36d2e56aef92bff3c"
+      sha256 "c1a0f935c6e18ea4bc39220d8aaa5355f0488c6ecb4cdf48faa5c4c94e51e849"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/nmelo/gaspeek/releases/download/v0.1.0/gaspeek_linux_arm64.tar.gz"
-      sha256 "60f74c59916a89333823a8036c309caefdf2f3d7ad9171de0d3a477b5a73c25f"
+      sha256 "10733637d5f8560e2ea845bf46c03a00a4691a264dff39e55ab7b0ca78033be0"
     end
     on_intel do
       url "https://github.com/nmelo/gaspeek/releases/download/v0.1.0/gaspeek_linux_amd64.tar.gz"
-      sha256 "9695ab30b1add37d8403a66961169f5b8b20bbc00f089b7c3f8a1f9e4839d725"
+      sha256 "9040b622cbc961e5b83f97b78703102d31df8f5650b507d37a6ce72df0ea291a"
     end
   end
 
