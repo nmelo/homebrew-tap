@@ -1,14 +1,33 @@
 class Gm < Formula
   desc "Agent-to-agent messaging CLI using beads"
   homepage "https://github.com/nmelo/gasmail"
-  url "https://github.com/nmelo/gasmail/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "f99e41aab44c9e7a95428b694f710a41363cb7ce5c803f413082cb4ce71dfc5f"
+  version "0.2.0"
   license "MIT"
 
-  depends_on "go" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.0/gasmail_darwin_arm64.tar.gz"
+      sha256 "d2d48491e76d5b926222efd9971137cc629bc691e3ea2a8570fd9427d969bdba"
+    end
+    on_intel do
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.0/gasmail_darwin_amd64.tar.gz"
+      sha256 "6bcf2d43ace8eb65ecf88726ed43831b4586d7f0c09a7e6c15dabee6035833ac"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.0/gasmail_linux_arm64.tar.gz"
+      sha256 "9fb319f082e1b1c298085e2c08ed8db76df9fe2b253fb0493da0240b15697c06"
+    end
+    on_intel do
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.0/gasmail_linux_amd64.tar.gz"
+      sha256 "114e9d16af3e84bfe53bc621b31eae2546722dbcc7aac1fae4d36c07304cce58"
+    end
+  end
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    bin.install "gm"
   end
 
   test do
