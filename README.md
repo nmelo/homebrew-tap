@@ -11,6 +11,8 @@ brew install <formula>
 
 ## Formulas
 
+Standalone tools extracted from [steveyegge/gastown](https://github.com/steveyegge/gastown).
+
 | Formula | Description |
 |---------|-------------|
 | [gm](https://github.com/nmelo/gasmail) | Agent-to-agent messaging CLI using beads |
