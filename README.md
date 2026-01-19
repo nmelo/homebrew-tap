@@ -11,7 +11,7 @@ brew install <formula>
 
 ## Formulas
 
-Standalone tools extracted from [steveyegge/gastown](https://github.com/steveyegge/gastown).
+Standalone tools extracted from [steveyegge/gastown](https://github.com/steveyegge/gastown). We wanted the core agent communication primitives without the full orchestration framework, and adapted them to work with tmux windows rather than gastown's session-based approach.
 
 | Formula | Description |
 |---------|-------------|
