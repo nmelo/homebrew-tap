@@ -19,5 +19,5 @@ brew install <formula>
 
 ## See Also
 
-- [bd](https://github.com/nmelo/beads) - Dependency-aware issue tracker for agent workflows
-- [gt](https://github.com/nmelo/gastown) - Multi-agent orchestration framework
+- [bd](https://github.com/steveyegge/beads) - Dependency-aware issue tracker for agent workflows
+- [gt](https://github.com/steveyegge/gastown) - Multi-agent orchestration framework
