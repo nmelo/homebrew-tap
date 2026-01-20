@@ -5,21 +5,21 @@
 class Bluectl < Formula
   desc "CLI for managing BlueField DPUs via Secure Infrastructure"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.5.2-rc14"
+  version "0.5.2-rc15"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc14/bluectl_darwin_amd64.tar.gz"
-      sha256 "241937b4431872dfecce0f0d7be5ef7b84e71340d9aee8087a7cadbee7bb6d2f"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc15/bluectl_darwin_amd64.tar.gz"
+      sha256 "a67d2d7a87be1bda2fbbadf38a27a89b403848ffadce8ec649df6added9a24d6"
 
       def install
         bin.install "bluectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc14/bluectl_darwin_arm64.tar.gz"
-      sha256 "36f20bc87263b9d0d90026929a8f12a3fe3fad3275a0b062cbc4524f414a54c7"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc15/bluectl_darwin_arm64.tar.gz"
+      sha256 "01f606ba137e9b33b741e61426e485ac31b855a4aedb93ebf7ff2b86ec9c320b"
 
       def install
         bin.install "bluectl"
@@ -29,15 +29,15 @@ class Bluectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc14/bluectl_linux_amd64.tar.gz"
-      sha256 "4e0fbe6a0a1fe7437b7ed8aad307a2356f69c8d73d458a8d38c88d982c325d1c"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc15/bluectl_linux_amd64.tar.gz"
+      sha256 "b8b3ad6218c57373b8a196cea01ba817a9314c7d540f45e3295f1204f30d6829"
       def install
         bin.install "bluectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc14/bluectl_linux_arm64.tar.gz"
-      sha256 "c0620f5d2df3acc6219d6d2e95c1779f75243b21114f495f57fb0fd27720dfb1"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc15/bluectl_linux_arm64.tar.gz"
+      sha256 "6cfbc0d167cb2f9899f5a947b90a7905c7ba1ee50aebd028fd576aa015abe4b2"
       def install
         bin.install "bluectl"
       end
