@@ -11,7 +11,7 @@ class Km < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.1/km_darwin_amd64.tar.gz"
-      sha256 "91f731db5562768ce093a48956ca1547227300827ca3069f218a925cf5f796ef"
+      sha256 "19614cb4bc75043bdfb75a32d11ba925b55babffbfc4121da7330d5c05dc8b6e"
 
       def install
         bin.install "km"
@@ -19,7 +19,7 @@ class Km < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.1/km_darwin_arm64.tar.gz"
-      sha256 "f689f53ca897fb2c12b60b2d6b190e7611b7863bf5e91aae266cf0c682e2b943"
+      sha256 "73946fba2031c38eee35e55ea04df60d9fc87b27d1171d971b7744ff116a9014"
 
       def install
         bin.install "km"
@@ -30,14 +30,14 @@ class Km < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.1/km_linux_amd64.tar.gz"
-      sha256 "184d3350f588852f837e4ed6b8868ed5f8176316891e9014a41723a01df8279d"
+      sha256 "019e8cc594187e7dace865cd75433730e92e368836826bd62d37470f6bf01b9f"
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.1/km_linux_arm64.tar.gz"
-      sha256 "69410b48943aeb50e0d6d0d7f1d463ec4ae79155c72d90f3be93ce0d3e9cc576"
+      sha256 "ffdfa1ee9a2556cf236040da4623adb101f6d42f8e07c1b6c65860cb044f2c5c"
       def install
         bin.install "km"
       end
