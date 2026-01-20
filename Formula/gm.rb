@@ -1,28 +1,28 @@
 class Gm < Formula
   desc "Agent-to-agent messaging CLI using beads"
   homepage "https://github.com/nmelo/gasmail"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/nmelo/gasmail/releases/download/v0.2.1/gasmail_darwin_arm64.tar.gz"
-      sha256 "575cd2b88b0f880dea39c6d2f3b918959bb5312358b24ef6701b2c89001f46ab"
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.2/gasmail_darwin_arm64.tar.gz"
+      sha256 "f188ca32e58289277ba4dde88344320cbb174ffced024a8d3fa695f418f166d4"
     end
     on_intel do
-      url "https://github.com/nmelo/gasmail/releases/download/v0.2.1/gasmail_darwin_amd64.tar.gz"
-      sha256 "ae39f1ba79e0506523220271a22857ee4e52e275edb145750bc5cad6dbb29d59"
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.2/gasmail_darwin_amd64.tar.gz"
+      sha256 "0e5670516ffece3ee2a254fa7c80ed90bfc070ca0f5dabe75dab3b7ef93ed8db"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/nmelo/gasmail/releases/download/v0.2.1/gasmail_linux_arm64.tar.gz"
-      sha256 "f71e2509aed75a7d8511ad07698a6a5b8a3a2205e57bbfc3798e768b5b7be36b"
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.2/gasmail_linux_arm64.tar.gz"
+      sha256 "d0823d4185269f771a8958dd38a1490aad00a3428517420ce9edfa033baf1b4e"
     end
     on_intel do
-      url "https://github.com/nmelo/gasmail/releases/download/v0.2.1/gasmail_linux_amd64.tar.gz"
-      sha256 "90c9dc4fd43bd89571b5e13c319c90624315f10e2d48c51373f89fc840e81547"
+      url "https://github.com/nmelo/gasmail/releases/download/v0.2.2/gasmail_linux_amd64.tar.gz"
+      sha256 "308e031fa564090e0702ec82025c2ff5a6494044e498322bf591f7dde401e4f9"
     end
   end
 
