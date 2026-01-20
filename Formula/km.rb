@@ -5,21 +5,21 @@
 class Km < Formula
   desc "Key management CLI for Secure Infrastructure"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.5.2-rc5"
+  version "0.5.2-rc6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc5/km_darwin_amd64.tar.gz"
-      sha256 "6d7c85dfe00d03b683bbb15f256e6c1b70a2883251010414b37dfac9316b6c9b"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc6/km_darwin_amd64.tar.gz"
+      sha256 "20880640675de9ad31896a27cb55e4fb8214a014b49640b1430c36bfba635adb"
 
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc5/km_darwin_arm64.tar.gz"
-      sha256 "86cf774281eda0fee1eb5d0e289755475a413c60c358bb675f76eac63525bd84"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc6/km_darwin_arm64.tar.gz"
+      sha256 "e444fd2f04c757e85c22e4b393d01ab7104a65354e3a968eced4979a28c5b9bd"
 
       def install
         bin.install "km"
@@ -29,15 +29,15 @@ class Km < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc5/km_linux_amd64.tar.gz"
-      sha256 "5a409d0a397e512c90db87d1956f76564e11b400740898c389acdd9a0f5d2b81"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc6/km_linux_amd64.tar.gz"
+      sha256 "834443921ed817f400b05aa167eaf6c6bc9248813c2924b633f92c9dc378af3d"
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc5/km_linux_arm64.tar.gz"
-      sha256 "63ae4f39fb3dea68203268da12411452f584d510197b35ad6aeb22063e76a694"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.5.2-rc6/km_linux_arm64.tar.gz"
+      sha256 "bf1fb496de8d12f4b241a2a855a9f5094f8b7dcc46c65efdd30275cc6ce5f59d"
       def install
         bin.install "km"
       end
