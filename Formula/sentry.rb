@@ -5,21 +5,21 @@
 class Sentry < Formula
   desc "Sentry host agent for Secure Infrastructure attestation"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.6.3"
+  version "0.6.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/host-agent_darwin_amd64.tar.gz"
-      sha256 "acb7dd4c094941b382e838f69bf4d2a04e1f03ba12182b3cfc57000f06ee4453"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/host-agent_darwin_amd64.tar.gz"
+      sha256 "029416a42de89068ce0f61329efcb12784de18c3ca61a78729a7c3695a28d046"
 
       def install
         bin.install "host-agent" => "sentry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/host-agent_darwin_arm64.tar.gz"
-      sha256 "1fca7587b60404ad9ed872b090e77388f60d6b7db960005490419d4befb1a3e1"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/host-agent_darwin_arm64.tar.gz"
+      sha256 "558afa38dc052df9542c88172e07c509ef478e7da9c4853f877d13d93b3ab321"
 
       def install
         bin.install "host-agent" => "sentry"
@@ -29,15 +29,15 @@ class Sentry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/host-agent_linux_amd64.tar.gz"
-      sha256 "1c77283dbd3d669e981e773e0d396b52283faf54f1b52c2b8b5e2d4e88db984b"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/host-agent_linux_amd64.tar.gz"
+      sha256 "d7db683c6d3d38d64842c7a168cce9d5c1e2daacf5d1c9c6cb76b117f1e01ca5"
       def install
         bin.install "host-agent" => "sentry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/host-agent_linux_arm64.tar.gz"
-      sha256 "d54dd0efe3a60c5cc8cfdbeb2f6f0b2415d78af279e8bbf4c5620b5062429cf9"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/host-agent_linux_arm64.tar.gz"
+      sha256 "0379b2653044d1f4afdbce2cf0ca44acd93e1c62f95fc75bd50079234efe92c0"
       def install
         bin.install "host-agent" => "sentry"
       end
