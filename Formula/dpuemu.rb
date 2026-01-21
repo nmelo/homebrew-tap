@@ -5,21 +5,21 @@
 class Dpuemu < Formula
   desc "DPU emulator for Secure Infrastructure local development"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.6.3"
+  version "0.6.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/dpuemu_darwin_amd64.tar.gz"
-      sha256 "68f133db49cc6a0dd120ccab932265d401a489032d5fe95b6c0a18df00614673"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/dpuemu_darwin_amd64.tar.gz"
+      sha256 "2529ab84a6e3a7e06ab3610cd699697d035066bdcfcfa7446cec5519f9c79f17"
 
       def install
         bin.install "dpuemu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/dpuemu_darwin_arm64.tar.gz"
-      sha256 "f72545d20bc5579b599671766cc93e82dd09b1770c0e8b42a5cd2fabd44bc431"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/dpuemu_darwin_arm64.tar.gz"
+      sha256 "58d41c95dea503cf846845399f6ad673cd2b39e023e4f58a1700e15894fb14e6"
 
       def install
         bin.install "dpuemu"
@@ -29,15 +29,15 @@ class Dpuemu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/dpuemu_linux_amd64.tar.gz"
-      sha256 "0c29f88b1cf562be0a6ebf434a56cad1729f00fa9d55d92307e480fee11e1707"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/dpuemu_linux_amd64.tar.gz"
+      sha256 "8db7e11d80a39f212f64fd63d91a233b0d24003b7ced2a5dff483a32039e7b9d"
       def install
         bin.install "dpuemu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.3/dpuemu_linux_arm64.tar.gz"
-      sha256 "c2c2b8cc6c7a5547359f725c25c3c92479cee9672a87d03998a00fa56d3a728c"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.4/dpuemu_linux_arm64.tar.gz"
+      sha256 "b382034215f6c50e3a7db2b4b4787e20d7e7779d38691abbd7e99eecfda1e6bd"
       def install
         bin.install "dpuemu"
       end
