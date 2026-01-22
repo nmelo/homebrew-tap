@@ -10,7 +10,8 @@ class BeadsUi < Formula
   depends_on "node"
 
   def install
-    libexec.install Dir["*"]
+    # Include hidden files like .next (Dir["*"] excludes dotfiles)
+    libexec.install Dir["*"] + Dir[".*"] - [".", ".."]
 
     # Create wrapper script
     (bin/"beads-ui").write <<~EOS
