@@ -5,7 +5,7 @@ class BeadsUi < Formula
   license "Apache-2.0"
 
   url "https://github.com/nmelo/bdui/releases/download/v0.2.0/beads-ui-0.2.0-standalone.tar.gz"
-  sha256 "14c18089d862bf32774375e5f357a80edbb59ba91df7422239fa698b6d79b13c"
+  sha256 "cd5677a39ef5fcda8833607cbdd982a1bd7449cf7895e351c13a9be55b606595"
 
   depends_on "node"
 
