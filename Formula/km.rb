@@ -5,21 +5,21 @@
 class Km < Formula
   desc "Key management CLI for Secure Infrastructure"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.6.5"
+  version "0.6.6-rc1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.5/km_darwin_amd64.tar.gz"
-      sha256 "4d39b5dcf68bfaedd30e3bd03e5350c29cde3b29a94c922c990d69234f0a3a72"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.6-rc1/km_darwin_amd64.tar.gz"
+      sha256 "5d6d9f0b9f7bad36a692b85985639cbf31170b5e577d85aa3aa12850cfb44d34"
 
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.5/km_darwin_arm64.tar.gz"
-      sha256 "d0b66887fb2b68986f1eb97c866508eb73567875a8f78dcbb968ab5b9fd8f8f3"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.6-rc1/km_darwin_arm64.tar.gz"
+      sha256 "8f9743f4c11dff086a027802bd0961396d30c677e9c64745dbf15db193cf697f"
 
       def install
         bin.install "km"
@@ -29,15 +29,15 @@ class Km < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.5/km_linux_amd64.tar.gz"
-      sha256 "e5537b1d7b1cf20cc7680f8e60241e2c44aad44c9a018a34376b196edbf4ec77"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.6-rc1/km_linux_amd64.tar.gz"
+      sha256 "b8815a08f2fe6350c2ea4fbaa8418b0efcc5ab473070f09cc6982be6deb7755f"
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.5/km_linux_arm64.tar.gz"
-      sha256 "d3edcd3cc6639c0b57f786ed152e2e6ce34999a8cb5e0a01952c9112cc31d2e0"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.6-rc1/km_linux_arm64.tar.gz"
+      sha256 "28fe6ea6e925a8f4868a1ba1821b8eb205a7857e88c87d31c5c2402dcd76470d"
       def install
         bin.install "km"
       end
