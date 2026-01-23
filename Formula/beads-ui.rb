@@ -1,11 +1,11 @@
 class BeadsUi < Formula
   desc "Web interface for viewing and managing beads issue tracking databases"
   homepage "https://github.com/nmelo/bdui"
-  version "0.2.6"
+  version "0.2.7"
   license "Apache-2.0"
 
-  url "https://github.com/nmelo/bdui/releases/download/v0.2.6/beads-ui-0.2.6-standalone.tar.gz"
-  sha256 "9b09d45bfe058b1af9d3a6321987c60fef9e83504ac89c5bcd10c95bc682fa46"
+  url "https://github.com/nmelo/bdui/releases/download/v0.2.7/beads-ui-0.2.7-standalone.tar.gz"
+  sha256 "de6afcf8922e09882ad2bdf1bde83d9515255a3973d1c44d27ff161ddd711940"
 
   depends_on "node"
 
