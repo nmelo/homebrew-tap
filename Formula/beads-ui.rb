@@ -15,7 +15,7 @@ class BeadsUi < Formula
     working_dir var/"beads-ui"
     log_path var/"log/beads-ui.log"
     error_log_path var/"log/beads-ui.log"
-    environment_variables PORT: "3000", HOSTNAME: "localhost"
+    environment_variables PORT: "3000", HOSTNAME: "localhost", PATH: "#{HOMEBREW_PREFIX}/bin:#{HOMEBREW_PREFIX}/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
   end
 
   def install
