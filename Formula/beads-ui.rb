@@ -15,7 +15,7 @@ class BeadsUi < Formula
     working_dir var/"beads-ui"
     log_path var/"log/beads-ui.log"
     error_log_path var/"log/beads-ui.log"
-    environment_variables PORT: "3000", HOSTNAME: "localhost", PATH: "#{HOMEBREW_PREFIX}/bin:#{HOMEBREW_PREFIX}/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+    environment_variables PORT: "3000", HOSTNAME: "localhost"
   end
 
   def install
@@ -58,6 +58,11 @@ class BeadsUi < Formula
             { "id": "my-project", "name": "My Project", "databasePath": "/path/to/.beads/beads.db" }
           ]
         }
+
+      If bd is not in /opt/homebrew/bin, set BD_PATH in the plist:
+        Edit ~/Library/LaunchAgents/homebrew.mxcl.beads-ui.plist
+        Add <key>BD_PATH</key><string>/path/to/bd</string> in EnvironmentVariables
+        Then: brew services restart beads-ui
     EOS
   end
 
