@@ -25,13 +25,13 @@ class BeadsUi < Formula
     # Include hidden files like .next (Dir["*"] excludes dotfiles)
     libexec.install Dir["*"] + Dir[".*"] - [".", ".."]
 
-    # Create wrapper script
+    # Create wrapper script with full path to node for launchd compatibility
     (bin/"beads-ui").write <<~EOS
       #!/bin/bash
       export PORT="${PORT:-3000}"
       export HOSTNAME="${HOSTNAME:-localhost}"
       cd "#{libexec}"
-      exec node server.js "$@"
+      exec "#{Formula["node"].opt_bin}/node" server.js "$@"
     EOS
   end
 
