@@ -1,11 +1,11 @@
 class BeadsUi < Formula
   desc "Web interface for viewing and managing beads issue tracking databases"
   homepage "https://github.com/nmelo/bdui"
-  version "0.2.11"
+  version "0.2.12"
   license "Apache-2.0"
 
-  url "https://github.com/nmelo/bdui/releases/download/v0.2.11/beads-ui-0.2.11-standalone.tar.gz"
-  sha256 "9988031a9eb63a0007fba1d2a34be04b2cc79424b7892b2e220f0a3362efad0a"
+  url "https://github.com/nmelo/bdui/releases/download/v0.2.12/beads-ui-0.2.12-standalone.tar.gz"
+  sha256 "17cb0debf978d362b241b41138c156e71269857749d10ee274f02959950d0772"
 
   depends_on "node"
 
@@ -59,10 +59,6 @@ class BeadsUi < Formula
           ]
         }
 
-      If bd is not in /opt/homebrew/bin, set BD_PATH in the plist:
-        Edit ~/Library/LaunchAgents/homebrew.mxcl.beads-ui.plist
-        Add <key>BD_PATH</key><string>/path/to/bd</string> in EnvironmentVariables
-        Then: brew services restart beads-ui
     EOS
   end
 
