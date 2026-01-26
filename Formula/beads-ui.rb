@@ -9,7 +9,19 @@ class BeadsUi < Formula
 
   depends_on "node"
 
+  service do
+    run [opt_bin/"beads-ui"]
+    keep_alive true
+    working_dir var/"beads-ui"
+    log_path var/"log/beads-ui.log"
+    error_log_path var/"log/beads-ui.log"
+    environment_variables PORT: "3000", HOSTNAME: "localhost"
+  end
+
   def install
+    # Create directories for service
+    (var/"beads-ui").mkpath
+    (var/"log").mkpath
     # Include hidden files like .next (Dir["*"] excludes dotfiles)
     libexec.install Dir["*"] + Dir[".*"] - [".", ".."]
 
@@ -27,10 +39,18 @@ class BeadsUi < Formula
     <<~EOS
       Beads UI is a web interface for beads databases.
 
-      To start the server:
+      To run as a background service (recommended):
+        brew services start beads-ui
+
+      To stop the service:
+        brew services stop beads-ui
+
+      Or run manually:
         beads-ui
 
       Then open http://localhost:3000 in your browser.
+
+      Logs are written to: #{var}/log/beads-ui.log
 
       Configure workspaces in ~/.config/beads-ui/workspaces.json:
         {
@@ -38,10 +58,6 @@ class BeadsUi < Formula
             { "id": "my-project", "name": "My Project", "databasePath": "/path/to/.beads/beads.db" }
           ]
         }
-
-      Environment variables:
-        PORT      - Server port (default: 3000)
-        HOSTNAME  - Server hostname (default: localhost)
     EOS
   end
 
