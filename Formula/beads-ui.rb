@@ -1,11 +1,11 @@
 class BeadsUi < Formula
   desc "Web interface for viewing and managing beads issue tracking databases"
   homepage "https://github.com/nmelo/bdui"
-  version "0.2.14"
+  version "0.2.15"
   license "Apache-2.0"
 
   url "https://github.com/nmelo/bdui/releases/download/v0.2.13/beads-ui-0.2.13-standalone.tar.gz"
-  sha256 "aa80e560f4d8d56033cd760131f599fb488d227cb495cf4b4d1eb755aac3283a"
+  sha256 "c375f95060df9a49aa502eb6f9e53bd522499aa0823dd4cf32cff8b7bbfcfeed"
 
   depends_on "node"
 
@@ -15,7 +15,7 @@ class BeadsUi < Formula
     working_dir var/"beads-ui"
     log_path var/"log/beads-ui.log"
     error_log_path var/"log/beads-ui.log"
-    environment_variables PORT: "3000", HOSTNAME: "localhost"
+    environment_variables PORT: "3000", HOSTNAME: "localhost", WS_PORT: "3001"
   end
 
   def install
@@ -26,12 +26,15 @@ class BeadsUi < Formula
     libexec.install Dir["*"] + Dir[".*"] - [".", ".."]
 
     # Create wrapper script with full path to node for launchd compatibility
+    # Starts both the Next.js server and WebSocket server for live-reload
     (bin/"beads-ui").write <<~EOS
       #!/bin/bash
       export PORT="${PORT:-3000}"
       export HOSTNAME="${HOSTNAME:-localhost}"
+      export WS_PORT="${WS_PORT:-3001}"
+      export PATH="#{Formula["node"].opt_bin}:$PATH"
       cd "#{libexec}"
-      exec "#{Formula["node"].opt_bin}/node" server.js "$@"
+      exec ./beads-ui "$@"
     EOS
   end
 
