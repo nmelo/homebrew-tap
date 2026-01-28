@@ -5,21 +5,21 @@
 class Sentry < Formula
   desc "Sentry host agent for Secure Infrastructure attestation"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.6.7"
+  version "0.6.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/host-agent_darwin_amd64.tar.gz"
-      sha256 "fe4bd2dd12b737c487690df63fe4f443d50dd96c4201e65da9e1574e1694534c"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.8/sentry_darwin_amd64.tar.gz"
+      sha256 "8416c59597cc5f2ecb34b3616d6a73e730973eb75aae292a17cde34c932a2f67"
 
       def install
         bin.install "sentry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/host-agent_darwin_arm64.tar.gz"
-      sha256 "fea5b37ea78d60c14ffcd8c0997017082600a1f77f584de644b74da241196e54"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.8/sentry_darwin_arm64.tar.gz"
+      sha256 "89a7e41a852eed983d5e962dc9309c8b7dc62035f7666f766f74c904ed4bf83b"
 
       def install
         bin.install "sentry"
@@ -29,15 +29,15 @@ class Sentry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/host-agent_linux_amd64.tar.gz"
-      sha256 "87c070989c8d4383f4099173f038a0cf6aba9c54095fe29de8deb1a2d8a1a432"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.8/sentry_linux_amd64.tar.gz"
+      sha256 "ee6d9291a8883a8d0d9081e86e9709dae729d6eb0f1226b41aa4a38afde92860"
       def install
         bin.install "sentry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/host-agent_linux_arm64.tar.gz"
-      sha256 "bbb2485b7439bc6d25fa5c4056ed0f87302b70bc717c9de16c3bde6b62f74f89"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.8/sentry_linux_arm64.tar.gz"
+      sha256 "1e0a302e6aa9c7bf5bd2e683e8c7487e79ec45343346be76d5e9222b07ff4252"
       def install
         bin.install "sentry"
       end
