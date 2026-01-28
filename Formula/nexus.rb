@@ -11,7 +11,7 @@ class Nexus < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/control-plane_darwin_amd64.tar.gz"
-      sha256 "fba2d3ce170276ecc92e549d686866c3f8499de70ab40498c3a5b63dd9bc8102"
+      sha256 "ec3903dd2640ee4114993a314022aa89f492f869474568473c0b0332d75b447f"
 
       def install
         bin.install "control-plane" => "nexus"
@@ -19,7 +19,7 @@ class Nexus < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/control-plane_darwin_arm64.tar.gz"
-      sha256 "e40da923b23badca087befcd15facb91139a12c21e8110742be6b4138a0ec291"
+      sha256 "c06e04250198be554afe392c30d9e185fd975ca8a41890650c53a8f92094b6a6"
 
       def install
         bin.install "control-plane" => "nexus"
@@ -30,14 +30,14 @@ class Nexus < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/control-plane_linux_amd64.tar.gz"
-      sha256 "c6009c01d25ce770b62fcd1c6e49eca1126d540a86c619722bedad090e21a116"
+      sha256 "d9e647e48e309f5c002749a920b3039b6b92f262666269aad1758b75e0b1e580"
       def install
         bin.install "control-plane" => "nexus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.7/control-plane_linux_arm64.tar.gz"
-      sha256 "9ecbef6103d712b25e80bc3df26bf32a9cf8d2d96adc0adee209d834e4f5de7a"
+      sha256 "7ad336234bdcf4bb78d2fc8834611eb4bf3f4536f3faa3f6ecf114daf02a74b2"
       def install
         bin.install "control-plane" => "nexus"
       end
