@@ -14,7 +14,7 @@ class Nexus < Formula
       sha256 "fd6466f1e5d98284d38e2afb40d128d682fd88d3a76465b346b9aa8caedcc68b"
 
       def install
-        bin.install "control-plane" => "nexus"
+        bin.install "nexus"
       end
     end
     if Hardware::CPU.arm?
@@ -22,7 +22,7 @@ class Nexus < Formula
       sha256 "ee91c3e734de8602c2ecefa214fd7335da2dc3f963015ed7d6bfb32c1fbeb004"
 
       def install
-        bin.install "control-plane" => "nexus"
+        bin.install "nexus"
       end
     end
   end
@@ -32,14 +32,14 @@ class Nexus < Formula
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.11/nexus_linux_amd64.tar.gz"
       sha256 "b9446c36d81e61f6ed3ca9db887cd3dc0af316183f085a8eade0e5a727b72837"
       def install
-        bin.install "control-plane" => "nexus"
+        bin.install "nexus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.11/nexus_linux_arm64.tar.gz"
       sha256 "03491f9e0f784ebe21fbc62c3946f09fa6e5fa50a545c11e0da4b8b108029dbb"
       def install
-        bin.install "control-plane" => "nexus"
+        bin.install "nexus"
       end
     end
   end
