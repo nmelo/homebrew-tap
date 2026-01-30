@@ -5,21 +5,21 @@
 class Nexus < Formula
   desc "Nexus control plane for Secure Infrastructure"
   homepage "https://github.com/gobeyondidentity/secure-infra"
-  version "0.6.10"
+  version "0.6.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.10/nexus_darwin_amd64.tar.gz"
-      sha256 "22b88ff69b52b72d9d125ab6fe1485d39dd9454575f0e8c5a1050a4b28ac3cd6"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.11/nexus_darwin_amd64.tar.gz"
+      sha256 "fd6466f1e5d98284d38e2afb40d128d682fd88d3a76465b346b9aa8caedcc68b"
 
       def install
         bin.install "control-plane" => "nexus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.10/nexus_darwin_arm64.tar.gz"
-      sha256 "0f1f5167007c988a5b71fdb4a2b105b4d61b906ebdedacbd67a3107968e9790f"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.11/nexus_darwin_arm64.tar.gz"
+      sha256 "ee91c3e734de8602c2ecefa214fd7335da2dc3f963015ed7d6bfb32c1fbeb004"
 
       def install
         bin.install "control-plane" => "nexus"
@@ -29,15 +29,15 @@ class Nexus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.10/nexus_linux_amd64.tar.gz"
-      sha256 "e437f06ff9b00be0bc4d84d9610b4ad5a7cadb2a741c8f15fdb4f839151b6385"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.11/nexus_linux_amd64.tar.gz"
+      sha256 "b9446c36d81e61f6ed3ca9db887cd3dc0af316183f085a8eade0e5a727b72837"
       def install
         bin.install "control-plane" => "nexus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.10/nexus_linux_arm64.tar.gz"
-      sha256 "e45c686b62a98d5da49de4dcab4ec36eaf33451f8b840728201f557816a904f4"
+      url "https://github.com/gobeyondidentity/secure-infra/releases/download/v0.6.11/nexus_linux_arm64.tar.gz"
+      sha256 "03491f9e0f784ebe21fbc62c3946f09fa6e5fa50a545c11e0da4b8b108029dbb"
       def install
         bin.install "control-plane" => "nexus"
       end
