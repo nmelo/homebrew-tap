@@ -5,21 +5,21 @@
 class Gasadd < Formula
   desc "Queue messages to Claude agents in tmux windows without interrupting"
   homepage "https://github.com/nmelo/gasadd"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.2.0/gasadd_darwin_amd64.tar.gz"
-      sha256 "eb63e70be20e6fb3c816aa8c06da42a30094f416849251ef731efc0f7cc26cd5"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.3.0/gasadd_darwin_amd64.tar.gz"
+      sha256 "bba762123f01d6469ed31fe039da9054c911c748e33b4a05f879a678a8af2568"
 
       def install
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.2.0/gasadd_darwin_arm64.tar.gz"
-      sha256 "8d32e206d38527c6396268cb01111a945cfe03c434ac9c045a3a5bcccaf7e47c"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.3.0/gasadd_darwin_arm64.tar.gz"
+      sha256 "c0551bfad9cc43cae9fdfaf735da5439501f5d4fc28a7c9b14870104476a18e2"
 
       def install
         bin.install "ga"
@@ -29,15 +29,15 @@ class Gasadd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.2.0/gasadd_linux_amd64.tar.gz"
-      sha256 "edd18c5028130252379384da87a16411c862fa070ab579cd78fb9f202fb95df3"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.3.0/gasadd_linux_amd64.tar.gz"
+      sha256 "7ac5212a6f56192ab7bc54ddadaf99e465d79cbe9bf3f6f4d990f03ba1ab0a78"
       def install
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.2.0/gasadd_linux_arm64.tar.gz"
-      sha256 "289443760d0991adb82666cc2ecfb95661b9b0c484c1ff444e37bb54b99fde93"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.3.0/gasadd_linux_arm64.tar.gz"
+      sha256 "88426a3e5c8a91e418daf547eca5f889f6bc967fe2f9d7e13330c4ef23afd435"
       def install
         bin.install "ga"
       end
