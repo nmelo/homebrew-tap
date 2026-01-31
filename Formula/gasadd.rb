@@ -11,7 +11,7 @@ class Gasadd < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_darwin_amd64.tar.gz"
-      sha256 "cff2c95d8dcbc72db79bd88b2c9105ada6981d4638079d678d05afa7da396a5a"
+      sha256 "276746806b3369495bb5ec505f862a497adbfa9dc83539e4d757ff8e2f133ff0"
 
       def install
         bin.install "ga"
@@ -19,7 +19,7 @@ class Gasadd < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_darwin_arm64.tar.gz"
-      sha256 "93b0ca82bb7027bf7c156ca7aa0a30712ce8d2a802135c097626245ecc1be8da"
+      sha256 "f12634d3717399b0f32a36f1b948628e597cd20c8ff279b749fb8643df5b7e9a"
 
       def install
         bin.install "ga"
@@ -30,14 +30,14 @@ class Gasadd < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_linux_amd64.tar.gz"
-      sha256 "b5ae5eb83a1953893a65f87a24c57266271d1b1b643b75eb2e8c3ad56cd58be6"
+      sha256 "85d3dd4cb00fc34724662f0248466bc00a52f39806ab50ab990843af6a52b793"
       def install
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_linux_arm64.tar.gz"
-      sha256 "c5704d2f5e0b5040026837cc460afc9243593d3dd587e25b2d7c2fe5f54ea7d8"
+      sha256 "d9fc5063e18a27952b5a1f095c3348a725ab444ee7f26e34fb5d35872ed19f3e"
       def install
         bin.install "ga"
       end
