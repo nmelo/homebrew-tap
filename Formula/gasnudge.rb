@@ -5,21 +5,21 @@
 class Gasnudge < Formula
   desc "Send nudge messages to Claude agents in tmux windows"
   homepage "https://github.com/nmelo/gasnudge"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.1/gasnudge_darwin_amd64.tar.gz"
-      sha256 "c7c0038df0f9236efcf6b87666138cd02adb532ebdcc0c3efba193347d0f970a"
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.2/gasnudge_darwin_amd64.tar.gz"
+      sha256 "c8e89cea87267441893c8d13d38ab6ef2b0e3553fe10d225156f74bce57ba8a5"
 
       def install
         bin.install "gn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.1/gasnudge_darwin_arm64.tar.gz"
-      sha256 "e9b1df58fb450b41173e14401c10ff50ffc3e97efcc978d9c17410da08bafd19"
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.2/gasnudge_darwin_arm64.tar.gz"
+      sha256 "ae3f94a50451e81dec0f71758ebee699e4e9f9ca9936ea5ddf578d7468215683"
 
       def install
         bin.install "gn"
@@ -29,15 +29,15 @@ class Gasnudge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.1/gasnudge_linux_amd64.tar.gz"
-      sha256 "2ab510b4f1a5b15aad9b659a80ba9292c621983aec96688d66d39abbe75bde1d"
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.2/gasnudge_linux_amd64.tar.gz"
+      sha256 "001dffcda088298a4728d6794832dabc916f65812a4ff2507ae2c025eb67b7b6"
       def install
         bin.install "gn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.1/gasnudge_linux_arm64.tar.gz"
-      sha256 "5ff9356036e3d903665e46c1e46c5eba974a55f2b7f75b7dd30aad50309f8b78"
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.5.2/gasnudge_linux_arm64.tar.gz"
+      sha256 "96adf5a8da8506c59de8c1cfa84e57393185333e3f971a71e02da0d15a84b66a"
       def install
         bin.install "gn"
       end
