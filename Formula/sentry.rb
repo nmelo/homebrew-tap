@@ -11,7 +11,7 @@ class Sentry < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/sentry_darwin_amd64.tar.gz"
-      sha256 "5f438fb2471199fcbb77b79f89f1dfc8aac5be841eb537095143908f3eeda26a"
+      sha256 "17f2e51cbd29b4a3cb8e03462571b414721c36529e6de7da271b670697c2fefd"
 
       def install
         bin.install "sentry"
@@ -19,7 +19,7 @@ class Sentry < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/sentry_darwin_arm64.tar.gz"
-      sha256 "fc1c0069ea27c3838a09e4c039258086fd126249722681c30e4b0cfb8806a391"
+      sha256 "e84c0d2b64af2fdd4098c9d9da0ae70241dcd13269aa3ec0a278234366b7c50d"
 
       def install
         bin.install "sentry"
@@ -30,14 +30,14 @@ class Sentry < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/sentry_linux_amd64.tar.gz"
-      sha256 "6f6c5c8a39ae3230d14db3b8730cd3a71f11e177fea82e2ea86c212557cd7050"
+      sha256 "6c50da2c21d2547207ab9b698bf0889beef14db63581535d9a134801371c6685"
       def install
         bin.install "sentry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/sentry_linux_arm64.tar.gz"
-      sha256 "8c64cdd092b22cdf6737134ffebf877d4ec90d559160c55278449bbd1973330f"
+      sha256 "b8406e9b822136735ca18abdfe98907dd53afd4a9ae93625119ee69a1452c641"
       def install
         bin.install "sentry"
       end
