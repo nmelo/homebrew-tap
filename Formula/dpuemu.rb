@@ -11,7 +11,7 @@ class Dpuemu < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_darwin_amd64.tar.gz"
-      sha256 "e340330ff2042177dfd52a2d3de77e6462a51242732ff8feb3bbf78cd4fff04d"
+      sha256 "53e7b80c8b15d4ece5fddd9ddeaa93a94a127a2711ca7a0bcc31efeb13818704"
 
       def install
         bin.install "dpuemu"
@@ -19,7 +19,7 @@ class Dpuemu < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_darwin_arm64.tar.gz"
-      sha256 "8ca98d59eddcb0959590ed957179bf9b9a72b01514555c60af486dc798783ebd"
+      sha256 "5a02950a0c1bbe3759e19122008f459abf81d4092768f6a098ca1ddbe7b067fe"
 
       def install
         bin.install "dpuemu"
@@ -30,14 +30,14 @@ class Dpuemu < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_linux_amd64.tar.gz"
-      sha256 "4959759e3bc3867f9b5e191a23158a7831676d4e4273542e26abe1c13a598366"
+      sha256 "0c65b06367cede438ee9042e5d53d962ac106810ba69b7e075ee93e397997e4d"
       def install
         bin.install "dpuemu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_linux_arm64.tar.gz"
-      sha256 "7f49a0b5243760742f7a79a622604846907ad6b839f32fe07df487e395a5de1f"
+      sha256 "2bb0660d73293c503ac08e8bc98267014a8db55534c8593e2602208d14b37ecc"
       def install
         bin.install "dpuemu"
       end
