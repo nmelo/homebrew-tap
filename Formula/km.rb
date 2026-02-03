@@ -5,21 +5,21 @@
 class Km < Formula
   desc "Key management CLI for Project Cobalt"
   homepage "https://github.com/gobeyondidentity/cobalt"
-  version "0.6.12"
+  version "0.6.13"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/km_darwin_amd64.tar.gz"
-      sha256 "be9a70a6a75a789aac139cb8152e117c23dd97b68243385ac3764254df02a46e"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/km_darwin_amd64.tar.gz"
+      sha256 "65fa07da96d2c6e845fcb213611f6a3ae33ccf7717b92ac86f0a9495abd06bc6"
 
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/km_darwin_arm64.tar.gz"
-      sha256 "932e0e50fc64b3fb9381c0c46da28b2ead17d1cc7edca4babb410b95ed4c3b86"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/km_darwin_arm64.tar.gz"
+      sha256 "6844136c2cf13588f99172070595c22043a0b7879770006e949bbd418622495b"
 
       def install
         bin.install "km"
@@ -29,15 +29,15 @@ class Km < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/km_linux_amd64.tar.gz"
-      sha256 "dcd4f814d4992c81f389113294d3c9b2b0c1c73914f1c10b283b28bff5e1cedf"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/km_linux_amd64.tar.gz"
+      sha256 "5ca11c9825d2b693343fcdc441b870f17dfd6c4fab0122c7d73f27fff9dbda3d"
       def install
         bin.install "km"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/km_linux_arm64.tar.gz"
-      sha256 "e009ef0ee5afa846e79d368d0ecd855d402d4181e0541c02a590cd771c273a05"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/km_linux_arm64.tar.gz"
+      sha256 "d71615bf1853ec14836e1ed7389495a36ec07bfc5fe0d8798026026ae618089e"
       def install
         bin.install "km"
       end
