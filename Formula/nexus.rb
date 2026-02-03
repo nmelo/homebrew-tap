@@ -5,21 +5,21 @@
 class Nexus < Formula
   desc "Nexus control plane for Project Cobalt"
   homepage "https://github.com/gobeyondidentity/cobalt"
-  version "0.6.12"
+  version "0.6.13"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/nexus_darwin_amd64.tar.gz"
-      sha256 "5754f395ffa5d949db99f144896fa65c0d4ca103098486504e133ccd5eae2df6"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_darwin_amd64.tar.gz"
+      sha256 "e0bf2149cdac6cdc133ead13e56e63e4c735b99c688eefe0dc7d05e0b57cc2d1"
 
       def install
         bin.install "control-plane" => "nexus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/nexus_darwin_arm64.tar.gz"
-      sha256 "7a1664088df60280e4c45d221fd20740daba90796022f64b07680f9e06169cfd"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_darwin_arm64.tar.gz"
+      sha256 "0f025886ea5b5961d67e7ddef286ccc15872e40db769142fe13525edf818d78b"
 
       def install
         bin.install "control-plane" => "nexus"
@@ -29,15 +29,15 @@ class Nexus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/nexus_linux_amd64.tar.gz"
-      sha256 "a462836a16b9e640d29d8dad7879443aad4ca45e4770f9f2045dd7c609ad7b88"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_linux_amd64.tar.gz"
+      sha256 "dc44da513650b6c2f5bd37d084917e1bed97879b446e7864b7792eb0dbb03363"
       def install
         bin.install "control-plane" => "nexus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/nexus_linux_arm64.tar.gz"
-      sha256 "c6d68019603305ba92fa365d57e075dd198c5565a6c39f5f35cdde0834dde8f5"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_linux_arm64.tar.gz"
+      sha256 "23f7da88e3aa6e51a5bc73c21bcb45c2911e1899d322d40ecacc44bce23cc7cb"
       def install
         bin.install "control-plane" => "nexus"
       end
