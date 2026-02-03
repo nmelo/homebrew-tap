@@ -11,7 +11,7 @@ class Nexus < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_darwin_amd64.tar.gz"
-      sha256 "e0bf2149cdac6cdc133ead13e56e63e4c735b99c688eefe0dc7d05e0b57cc2d1"
+      sha256 "c04480636ca53900cbc73f13a2395da246e9a1cad7355ef06373d336438e0b15"
 
       def install
         bin.install "control-plane" => "nexus"
@@ -19,7 +19,7 @@ class Nexus < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_darwin_arm64.tar.gz"
-      sha256 "0f025886ea5b5961d67e7ddef286ccc15872e40db769142fe13525edf818d78b"
+      sha256 "6da586f962e843b3e76e7f44b1f99c5a486610b551d7e3cc9e379132c605c788"
 
       def install
         bin.install "control-plane" => "nexus"
@@ -30,14 +30,14 @@ class Nexus < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_linux_amd64.tar.gz"
-      sha256 "dc44da513650b6c2f5bd37d084917e1bed97879b446e7864b7792eb0dbb03363"
+      sha256 "539dc5169525e494801883d3c1930cf29bf3739b4bb18b70effc8f4d8cca4289"
       def install
         bin.install "control-plane" => "nexus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_linux_arm64.tar.gz"
-      sha256 "23f7da88e3aa6e51a5bc73c21bcb45c2911e1899d322d40ecacc44bce23cc7cb"
+      sha256 "f77fffaa1c4b5ba20836065cf75d6abce773f1b28510bed0a4b17c163e51b101"
       def install
         bin.install "control-plane" => "nexus"
       end
