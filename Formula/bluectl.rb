@@ -11,7 +11,7 @@ class Bluectl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_darwin_amd64.tar.gz"
-      sha256 "66975245a2e5ed63fb87be7656f9bdddfca2373d6608eae498f501e611b3a036"
+      sha256 "1944948b687ea9ca5aa598fbf98da98a37dfe657309d9e8e2611c8edb5bc9717"
 
       def install
         bin.install "bluectl"
@@ -19,7 +19,7 @@ class Bluectl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_darwin_arm64.tar.gz"
-      sha256 "ae5db1842c11f73997d79dacfd00bea23943a25860988ceae103d7024c38cbce"
+      sha256 "fc30b98d9166b52d45d518d3a5e3627ae220e05643123997140036da6ee999e8"
 
       def install
         bin.install "bluectl"
@@ -30,14 +30,14 @@ class Bluectl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_linux_amd64.tar.gz"
-      sha256 "a96da9ee816c451a9af877612b322004a3f0ea95d33af44413ae50df8002f1b1"
+      sha256 "375111cedadcb63bce873665ea8faefbf001015a73ec25c22cb85ea0f9946d26"
       def install
         bin.install "bluectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_linux_arm64.tar.gz"
-      sha256 "381cd55b55f41eebd3ee4be29d2e848b982483e832a211002ad80c80933e4f59"
+      sha256 "f6e034d89b09befdccec197bdeb0e477561fd86de05d55c14752942f9440f175"
       def install
         bin.install "bluectl"
       end
