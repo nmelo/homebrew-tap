@@ -5,21 +5,21 @@
 class Dpuemu < Formula
   desc "DPU emulator for Project Cobalt local development"
   homepage "https://github.com/gobeyondidentity/cobalt"
-  version "0.6.12"
+  version "0.6.13"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/dpuemu_darwin_amd64.tar.gz"
-      sha256 "cefba82a73421014b81d7042548d01c847156fe9e092a96750604715058447b5"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_darwin_amd64.tar.gz"
+      sha256 "e340330ff2042177dfd52a2d3de77e6462a51242732ff8feb3bbf78cd4fff04d"
 
       def install
         bin.install "dpuemu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/dpuemu_darwin_arm64.tar.gz"
-      sha256 "90387dccce1e81b04036d65918463ae4ae08586be24284fde71844cc357a0448"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_darwin_arm64.tar.gz"
+      sha256 "8ca98d59eddcb0959590ed957179bf9b9a72b01514555c60af486dc798783ebd"
 
       def install
         bin.install "dpuemu"
@@ -29,15 +29,15 @@ class Dpuemu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/dpuemu_linux_amd64.tar.gz"
-      sha256 "ec0efef94b8a747de1fc348b2d8b7871e8c95fd1d962cd57f6efc265d1079fca"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_linux_amd64.tar.gz"
+      sha256 "4959759e3bc3867f9b5e191a23158a7831676d4e4273542e26abe1c13a598366"
       def install
         bin.install "dpuemu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.12/dpuemu_linux_arm64.tar.gz"
-      sha256 "5db07f4fd98d791757b1067a4a8eb01936edaa9ea468d2a1be0d410caebd5a19"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/dpuemu_linux_arm64.tar.gz"
+      sha256 "7f49a0b5243760742f7a79a622604846907ad6b839f32fe07df487e395a5de1f"
       def install
         bin.install "dpuemu"
       end
