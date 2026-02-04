@@ -5,21 +5,21 @@
 class Bluectl < Formula
   desc "CLI for managing BlueField DPUs via Project Cobalt"
   homepage "https://github.com/gobeyondidentity/cobalt"
-  version "0.6.13"
+  version "0.6.14"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_darwin_amd64.tar.gz"
-      sha256 "1944948b687ea9ca5aa598fbf98da98a37dfe657309d9e8e2611c8edb5bc9717"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/bluectl_darwin_amd64.tar.gz"
+      sha256 "2c2b4a90b51c9a7a70b10349c740e8434f8544204d7d80fce8ba8e596887527f"
 
       def install
         bin.install "bluectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_darwin_arm64.tar.gz"
-      sha256 "fc30b98d9166b52d45d518d3a5e3627ae220e05643123997140036da6ee999e8"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/bluectl_darwin_arm64.tar.gz"
+      sha256 "a9429e02a13cd0c17c2d2431ef13bb8f7f6bd2ac69975be6827bc5445bad64a3"
 
       def install
         bin.install "bluectl"
@@ -29,15 +29,15 @@ class Bluectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_linux_amd64.tar.gz"
-      sha256 "375111cedadcb63bce873665ea8faefbf001015a73ec25c22cb85ea0f9946d26"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/bluectl_linux_amd64.tar.gz"
+      sha256 "c60bc84325f3bf8cee2e5355306d17da7bcab7a016dd703cd4a0a4d1a69467c0"
       def install
         bin.install "bluectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/bluectl_linux_arm64.tar.gz"
-      sha256 "f6e034d89b09befdccec197bdeb0e477561fd86de05d55c14752942f9440f175"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/bluectl_linux_arm64.tar.gz"
+      sha256 "d0167c774f87e3e6b28b2918e11ba44fe29906f13cec80899b2689e18d4de21c"
       def install
         bin.install "bluectl"
       end
