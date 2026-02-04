@@ -5,21 +5,21 @@
 class Sentry < Formula
   desc "Sentry host agent for Project Cobalt attestation"
   homepage "https://github.com/gobeyondidentity/cobalt"
-  version "0.6.13"
+  version "0.6.14"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/sentry_darwin_amd64.tar.gz"
-      sha256 "82f67be87bc7f9a8a5e72bd63015679eb7adb8423c652ce7cb274e3768d9e2e8"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/sentry_darwin_amd64.tar.gz"
+      sha256 "1def689273733798a15d239ab7d97f6a6dde4617852383bd39ecd41158563932"
 
       def install
         bin.install "sentry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/sentry_darwin_arm64.tar.gz"
-      sha256 "c7885c4e8aef225100a90a89b5dd91e7f803e9099bbb10ff7db30f0c1db070f2"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/sentry_darwin_arm64.tar.gz"
+      sha256 "21d7f51725ca3dba3de0e81c73a0fa41e1eabb7e1f966069811a12a1912b34ec"
 
       def install
         bin.install "sentry"
@@ -29,15 +29,15 @@ class Sentry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/sentry_linux_amd64.tar.gz"
-      sha256 "d4f08a4ff6de28337dfde2a4289ecf67e0309e89ebb42c13406ae24f59a3bfd1"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/sentry_linux_amd64.tar.gz"
+      sha256 "d6b16b2298943f817d6931365d1689942ff824d03b4b69ccf67457868f5ec199"
       def install
         bin.install "sentry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/sentry_linux_arm64.tar.gz"
-      sha256 "5e65ac3fefa04133894953a64241eec9d11750c5784bbfc54a1e40491d264c55"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/sentry_linux_arm64.tar.gz"
+      sha256 "925d1dca7a32bf452b0b65dd3effab28247243b8c8a5b013ea0679ecab15b6c1"
       def install
         bin.install "sentry"
       end
