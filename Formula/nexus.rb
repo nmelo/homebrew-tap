@@ -5,21 +5,21 @@
 class Nexus < Formula
   desc "Nexus control plane for Project Cobalt"
   homepage "https://github.com/gobeyondidentity/cobalt"
-  version "0.6.13"
+  version "0.6.14"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_darwin_amd64.tar.gz"
-      sha256 "c04480636ca53900cbc73f13a2395da246e9a1cad7355ef06373d336438e0b15"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/nexus_darwin_amd64.tar.gz"
+      sha256 "702ecb4cbb8258e1d83ec2c2620674461fa2abbc12bf73b94de82130f69c7905"
 
       def install
         bin.install "nexus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_darwin_arm64.tar.gz"
-      sha256 "6da586f962e843b3e76e7f44b1f99c5a486610b551d7e3cc9e379132c605c788"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/nexus_darwin_arm64.tar.gz"
+      sha256 "dffdf5f1df29d2b4237d20e4a1d312936d8f19dcf5cb070e7da8c09e327c0f72"
 
       def install
         bin.install "nexus"
@@ -29,15 +29,15 @@ class Nexus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_linux_amd64.tar.gz"
-      sha256 "539dc5169525e494801883d3c1930cf29bf3739b4bb18b70effc8f4d8cca4289"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/nexus_linux_amd64.tar.gz"
+      sha256 "aeaa0dd7270333cbe28a725c9da690725d05a8089db5f91607af8738a465d34d"
       def install
         bin.install "nexus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.13/nexus_linux_arm64.tar.gz"
-      sha256 "f77fffaa1c4b5ba20836065cf75d6abce773f1b28510bed0a4b17c163e51b101"
+      url "https://github.com/gobeyondidentity/cobalt/releases/download/v0.6.14/nexus_linux_arm64.tar.gz"
+      sha256 "eab428c82cf8b968cbca17d0fb37c7806caab82b54bfce9c5329437c49085ef8"
       def install
         bin.install "nexus"
       end
