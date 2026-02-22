@@ -5,23 +5,23 @@
 class Gasnudge < Formula
   desc "Send nudge messages to Claude agents in tmux windows"
   homepage "https://github.com/nmelo/gasnudge"
-  version "0.6.0"
+  version "0.6.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.0/gasnudge_darwin_amd64.tar.gz"
-      sha256 "da9711f5c375665cce4736067a369b6fae9c86dae9d6589beed6729da82b9ced"
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.2/gasnudge_darwin_amd64.tar.gz"
+      sha256 "4e501b3f0e08b5453eb059cc30219b6ed11a6575e3ea5619877629c4eb546dea"
 
-      def install
+      define_method(:install) do
         bin.install "gn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.0/gasnudge_darwin_arm64.tar.gz"
-      sha256 "f2d9fa227eed1f4d995a9cd44b4f50a546aeea32ba1d87b07339cde54c2fb4ab"
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.2/gasnudge_darwin_arm64.tar.gz"
+      sha256 "94f77348e7791b45219b6f3a150d1bd31d68b12c05257d839d8986e51fb441f5"
 
-      def install
+      define_method(:install) do
         bin.install "gn"
       end
     end
@@ -29,16 +29,16 @@ class Gasnudge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.0/gasnudge_linux_amd64.tar.gz"
-      sha256 "da5390d65f7696cdbd5521f6a4db36bc78ff2c312bfb9a3cbdac5bdc1d1ef185"
-      def install
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.2/gasnudge_linux_amd64.tar.gz"
+      sha256 "d9ae04fe15d8c13d51ac608bb3ca2050bc9a61c929b330a7495d608eadf6e68f"
+      define_method(:install) do
         bin.install "gn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.0/gasnudge_linux_arm64.tar.gz"
-      sha256 "938db9f1092ca0c03355d3cb6e0cdb52d4b19b7bc1ba7f83826b7b9026c37089"
-      def install
+      url "https://github.com/nmelo/gasnudge/releases/download/v0.6.2/gasnudge_linux_arm64.tar.gz"
+      sha256 "036ff0b013bce8d657ccf8775d30766a7da2aaf4b119093c848643766ad7bc8a"
+      define_method(:install) do
         bin.install "gn"
       end
     end
