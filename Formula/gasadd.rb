@@ -5,23 +5,23 @@
 class Gasadd < Formula
   desc "Queue messages to Claude agents in tmux windows without interrupting"
   homepage "https://github.com/nmelo/gasadd"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_darwin_amd64.tar.gz"
-      sha256 "8b00a041d2a53d4bda4f8a162da5ed436ab57609c9d98e2c9938fa373f6854d0"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.5.0/gasadd_darwin_amd64.tar.gz"
+      sha256 "0e78ec863d266181a14e6eba2b17fc15618edf1f2a6ed4e166458318d43ba34e"
 
-      def install
+      define_method(:install) do
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_darwin_arm64.tar.gz"
-      sha256 "ef57b8588b848f61ed1b1fa607a3023f584d67a3c6979fa8a7c08fb3bf256d46"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.5.0/gasadd_darwin_arm64.tar.gz"
+      sha256 "c877ea5f578200ea8cb904b7c0fec4b4ad95ea717b49b63d0ca3e08ddf47c512"
 
-      def install
+      define_method(:install) do
         bin.install "ga"
       end
     end
@@ -29,16 +29,16 @@ class Gasadd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_linux_amd64.tar.gz"
-      sha256 "2cfe0d951d53bae7334b0544cf9e87455979d59e539a220e08e04d4a7d62c5d7"
-      def install
+      url "https://github.com/nmelo/gasadd/releases/download/v0.5.0/gasadd_linux_amd64.tar.gz"
+      sha256 "da505ba6502fb44cc731402210765e77b160c0c4290b6ce0740c3abffff67b9d"
+      define_method(:install) do
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.4.0/gasadd_linux_arm64.tar.gz"
-      sha256 "7a74362a054e47b1dc9db8c69a2eeea778f013bbcd70deb0344d2b21d7e4bb6c"
-      def install
+      url "https://github.com/nmelo/gasadd/releases/download/v0.5.0/gasadd_linux_arm64.tar.gz"
+      sha256 "981e01760069e6f94287edab81982a67ad947cc842866e3217da65e4e9742eb5"
+      define_method(:install) do
         bin.install "ga"
       end
     end
