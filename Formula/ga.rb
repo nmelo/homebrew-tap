@@ -1,38 +1,36 @@
 class Ga < Formula
-  desc "Queue messages to Claude agents in tmux windows without interrupting"
+  desc "Queue messages to Claude agents in tmux windows"
   homepage "https://github.com/nmelo/gasadd"
-  version "0.1.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/nmelo/gasadd/releases/download/v0.1.0/gasadd_darwin_arm64.tar.gz"
-      sha256 "393968c7d938dac277dd8502797ef9346f9a68463bcad49f5fa1cb9255f80a65"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.1/gasadd_darwin_arm64.tar.gz"
+      sha256 "b538538d6181791a16cdbdcf8a9adb535b92089a93bda891d40d675b4506bc1d"
     end
     on_intel do
-      url "https://github.com/nmelo/gasadd/releases/download/v0.1.0/gasadd_darwin_amd64.tar.gz"
-      sha256 "266b7cc6fd1354ea29c2d2835b8b7e7196077516fb5c9ee741eb4c130730b58a"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.1/gasadd_darwin_amd64.tar.gz"
+      sha256 "9dd65eb3d41a8f9bdce97838733128e5ff6ff17f091ee59fad5393485652bb3b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/nmelo/gasadd/releases/download/v0.1.0/gasadd_linux_arm64.tar.gz"
-      sha256 "88e2fb509726a0d398e24c4aa51b88fdfe5be0bc6b70061f25e22e574300902e"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.1/gasadd_linux_arm64.tar.gz"
+      sha256 "fe3fda64823d778eb00b2d225a1d3698f8d37ca0caf13a274bd4168fbdac1b7b"
     end
     on_intel do
-      url "https://github.com/nmelo/gasadd/releases/download/v0.1.0/gasadd_linux_amd64.tar.gz"
-      sha256 "5632035e35de37e511549aa6145137a246beae2c339f0e7f39ad78ae6612df7d"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.1/gasadd_linux_amd64.tar.gz"
+      sha256 "400c38c51c35db22d3a46684fe84bffc49effb7250ba650e5fbb0ffbc119e1a1"
     end
   end
-
-  depends_on "tmux"
 
   def install
     bin.install "ga"
   end
 
   test do
-    assert_match "ga", shell_output("#{bin}/ga --help")
+    system "#{bin}/ga", "--version"
   end
 end
