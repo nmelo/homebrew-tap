@@ -5,21 +5,21 @@
 class Ga < Formula
   desc "Queue messages to Claude agents in tmux windows without interrupting"
   homepage "https://github.com/nmelo/gasadd"
-  version "0.8.4"
+  version "0.8.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.8.4/gasadd_darwin_amd64.tar.gz"
-      sha256 "dc1bb4690ff253b7614d64c87c45c5ef976bd104290023dc610ced8f52f0e478"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.5/gasadd_darwin_amd64.tar.gz"
+      sha256 "4163eb397b2bd824f63d086198eef71832ebea107485faee89a14174ab5c9cfb"
 
       define_method(:install) do
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.8.4/gasadd_darwin_arm64.tar.gz"
-      sha256 "993872c3484728041c3f4006065c3b60b250f7e746ea22fd8a8452ab165492fe"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.5/gasadd_darwin_arm64.tar.gz"
+      sha256 "8996848dcee61015c24dc9d5319c94ab490eaf98ac10d7930c577491132239b9"
 
       define_method(:install) do
         bin.install "ga"
@@ -29,15 +29,15 @@ class Ga < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.8.4/gasadd_linux_amd64.tar.gz"
-      sha256 "a3d11a33b1c2dde4433b1f3e78265aa76c935c83a25659ecb507943d10e0cb96"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.5/gasadd_linux_amd64.tar.gz"
+      sha256 "62e05c96ca356d578d904af4dbde40c256923438e296c050c7948eaa2d2c2b8e"
       define_method(:install) do
         bin.install "ga"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/gasadd/releases/download/v0.8.4/gasadd_linux_arm64.tar.gz"
-      sha256 "db0ca295b744db4aeff16f31a244141a0060bf427a55dc709d4ead6f82626671"
+      url "https://github.com/nmelo/gasadd/releases/download/v0.8.5/gasadd_linux_arm64.tar.gz"
+      sha256 "2c7cd11ec4d62f1a85b10a27440f1ac9c4c1811d1a8273805654f6a56e2b111d"
       define_method(:install) do
         bin.install "ga"
       end
