@@ -5,21 +5,21 @@
 class Initech < Formula
   desc "Bootstrap and manage multi-agent development projects"
   homepage "https://github.com/nmelo/initech"
-  version "1.18.6"
+  version "1.19.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nmelo/initech/releases/download/v1.18.6/initech_darwin_amd64.tar.gz"
-      sha256 "429c1adc91370733fd051abdffbc55092bdb475a4bf86beb8c21e9c8de358bf0"
+      url "https://github.com/nmelo/initech/releases/download/v1.19.0/initech_darwin_amd64.tar.gz"
+      sha256 "eeac877b5656a03936791b2ee95dccf846571e7117e692bdd19654b28f1769a4"
 
       define_method(:install) do
         bin.install "initech"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nmelo/initech/releases/download/v1.18.6/initech_darwin_arm64.tar.gz"
-      sha256 "84cec7fb98d345eb5bd84f44217c08b1c85807be41d7d60a9b8db53aa37dbeb5"
+      url "https://github.com/nmelo/initech/releases/download/v1.19.0/initech_darwin_arm64.tar.gz"
+      sha256 "ea83dee44b4eb6f04a17aee56a20d4adad1c6cc686024d36b6dd2f7c2f8a2e72"
 
       define_method(:install) do
         bin.install "initech"
@@ -29,15 +29,15 @@ class Initech < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/initech/releases/download/v1.18.6/initech_linux_amd64.tar.gz"
-      sha256 "222fe8120896093e356b9b80d97a00b15145cb830bf0c9be620244900a6d0af5"
+      url "https://github.com/nmelo/initech/releases/download/v1.19.0/initech_linux_amd64.tar.gz"
+      sha256 "42197e992b3957be5bd58717abb0c6b07943b5441e871e766108393a40300c47"
       define_method(:install) do
         bin.install "initech"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nmelo/initech/releases/download/v1.18.6/initech_linux_arm64.tar.gz"
-      sha256 "48e8b9f10fd1f10c3294f1569cc6e24196762042dde3a062373a70842ffca9d2"
+      url "https://github.com/nmelo/initech/releases/download/v1.19.0/initech_linux_arm64.tar.gz"
+      sha256 "e31c629cbaa6d762462f2e79fb27627bc8a4a84cbf5f2e9e44bff00f253ea39f"
       define_method(:install) do
         bin.install "initech"
       end
